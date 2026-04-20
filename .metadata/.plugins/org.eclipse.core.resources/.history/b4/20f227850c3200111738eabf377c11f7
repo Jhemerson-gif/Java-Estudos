@@ -1,0 +1,120 @@
+package Desafios;
+
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+public class Sistema_de_notas_em_Java2 {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String> nomes = new ArrayList <>();
+		
+		ArrayList<Double> notas = new ArrayList<>();
+		double maior  = 0;
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Sistema de Notas de Alunos em Java");
+		
+		for(int i = 0; i < 3; i++) { // loop  das informações da  array
+			
+			System.out.print("Digite seu nome: ");
+			
+			nomes.add( sc.nextLine());
+			
+			System.out.print("Digite a primeira nota:  ");
+			
+			notas.add(sc.nextDouble());
+			
+			System.out.print("Digite a Segunda nota: ");
+			
+			notas.add(sc.nextDouble());
+			
+			sc.nextLine();
+			
+			System.out.println("-------------------------------");
+			
+		}
+		
+		
+		for (int i = 0; i < nomes.size(); i++) { // Alunos  avaliados pela função
+			
+			alunoAprovadoReprovado(nomes.get(i), notas.get(i));
+			
+		}
+		
+		
+		
+		
+		System.out.println("-------------------------------"); // Maior e menor nota
+		
+		System.out.println("A maior nota foi de: " + Maior(nota1, nota2));
+		System.out.println("A menor nota foi de: " + Menor(nota1, nota2));
+
+		sc.close();
+	}
+	
+	
+	public static double calcularMedia(double[] notas) { // Função média
+
+		double soma = 0;
+		
+		for (int i = 0; i < notas.length; i++) {
+			soma+= notas[i];
+		
+		}
+		
+		return soma / notas.length;
+		
+	}
+	
+	public static void alunoAprovadoReprovado(String nomes, double[] notas) { // função de avaliação do aluno
+		double media = calcularMedia(notas);
+		
+		if (media > 7) {
+			
+			System.out.println("O aluno "+ nomes + " foi aprovado com a nota: "+ media);
+		}else {
+			
+			System.out.println("O aluno "+ nomes + " foi reprovado com a nota: "+ media);
+		}
+		
+	}
+	
+	public static double Maior(double[] notas) { // função de maior nota
+		double maior = 0;
+		for (int i = 1; i < notas.length; i++) {
+			
+			
+			
+			
+			if (notas[i] > maior) {
+				
+				maior = notas[i];
+				
+			}
+			
+			
+		}
+		return maior;	
+		
+	}
+	public static double Menor(double[] notas) { // função de menor nota
+		
+		double menor = 0;
+		for(int i =1; i < notas.length; i++) {
+		
+			
+			if ( notas[i] > menor) {
+			
+			menor =notas[i];
+			}
+		}
+		
+		return menor;
+	}
+	
+
+}

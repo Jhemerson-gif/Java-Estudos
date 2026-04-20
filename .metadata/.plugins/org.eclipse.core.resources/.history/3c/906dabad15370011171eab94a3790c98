@@ -1,0 +1,22 @@
+package Set_Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Set_Map_Exemplo1 {
+
+	public static void main(String[] args) {
+		
+		Map<Integer, String> produtos = new HashMap<>();
+		
+		produtos.put(1, "Teclado");
+		produtos.put(2, "Mouse");
+		produtos.put(3, "Monitor");
+		produtos.put(4, "Impressora");
+		
+		System.out.println("Produtos: "+ produtos);
+		
+		
+	}
+
+}

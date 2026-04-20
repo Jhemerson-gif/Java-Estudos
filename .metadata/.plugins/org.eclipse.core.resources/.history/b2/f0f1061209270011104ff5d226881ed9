@@ -1,0 +1,32 @@
+package Alg;
+
+import  java.util.Scanner;
+
+public class Aula7 {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int numero;
+		
+		System.out.print("Até que numero deseja descobri os numeros pares? ");
+		
+		numero = entrada.nextInt();
+		
+		for (int n = 1; n <= numero; n++) {
+			
+			if (n % 2 == 0) {
+				
+				System.out.println(n);
+				
+				if (n != numero) {
+					System.out.print(", ");
+					
+				}
+			}
+		}
+
+	}
+
+}

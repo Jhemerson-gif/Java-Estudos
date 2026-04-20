@@ -1,0 +1,26 @@
+package Listas;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Lista_Exercicio_2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> num = new ArrayList<>(Arrays.asList(5, 10, 20, 15, 30));
+		
+		System.out.println("Exercicio 2 - Somar Números da Lista");
+		int soma = 0;
+		
+		for(int i = 0; i < num.size(); i++) {
+			
+			soma += num.get(i);
+			
+			System.out.println(soma +" + "+ num.get(i+ 1));
+			
+		}
+		
+		System.out.println("O valor total da soma: "+ soma);
+	}
+
+}

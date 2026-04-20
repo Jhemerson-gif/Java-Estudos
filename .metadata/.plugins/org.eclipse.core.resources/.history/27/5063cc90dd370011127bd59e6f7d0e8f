@@ -1,0 +1,25 @@
+package Funcoes_Metodos_10;
+
+public class Funcoes_1 {
+	
+	public static void  mensagemBoasVindas() {
+		
+		System.out.println("Bem-vindo ao mundo das funções em java.");
+	}
+	
+	public static void saudar(String nome) {
+		
+		System.out.println("Olá, "+ nome +"! É um prazer te ver aqui.");
+	}
+	public static void main(String[] args) {
+		
+		mensagemBoasVindas();
+		
+		System.out.println("\n -------------------------------------");
+		
+		saudar("Jhemerson");
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package While;
+
+public class While_Exemplo_1 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("\n1. Contar de 1 até 5 com while \n");
+		
+		int contador =1;
+		
+		while (contador <= 5){
+		
+			System.out.println("Contador: " + contador);
+		
+			contador ++;
+			
+		}
+		System.out.println("\2. Contagem regressiva de 5 até 1 com while \n");
+		
+		int numero = 5;
+		
+		while(numero >= 1 ) {
+			
+			System.out.println("Contador: "+ numero);
+			
+			numero --;
+			
+		}
+		
+	}
+
+}

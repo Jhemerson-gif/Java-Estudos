@@ -1,0 +1,24 @@
+package Funcoes_Metodos_10;
+
+public class Exercicio_7 {
+	
+	public static String inverterTexto(String texto) {
+		
+		String invertido = "";
+		
+		for(int i = texto.length() -1; i >=0; i--){
+		
+			invertido += texto.charAt(i);
+			
+		}
+		
+		return invertido;
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println("Amongus " + inverterTexto(" Amongus"));
+
+	}
+
+}

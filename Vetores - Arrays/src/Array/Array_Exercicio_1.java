@@ -1,0 +1,32 @@
+package Array;
+
+public class Array_Exercicio_1 {
+
+	public static void main(String[] args) {
+		
+		
+		int[] vetor = {1,2,3,4,5};
+		
+		int cont = 0;
+		
+
+		for (int valor : vetor) {
+			
+			System.out.println("Valor na posição "+ cont + ": "+ valor);
+			
+			cont++;
+		}
+		
+		
+		// Segunda maneira de resolver
+		
+		System.out.println("----------------------------");
+		
+		
+		for(int i = 0; i < vetor.length; i++) {
+			
+			System.out.println("Valor na posição "+ i +": "+ vetor[i]);
+		}
+	}
+
+}

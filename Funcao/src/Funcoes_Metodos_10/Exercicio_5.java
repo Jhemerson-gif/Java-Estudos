@@ -1,0 +1,37 @@
+package Funcoes_Metodos_10;
+
+import java.util.Scanner;
+
+public class Exercicio_5 {
+	
+	public  static int maior(int a, int b) {
+		
+//		if (a > b) {
+//			return a;
+//		}else {
+//			return b;
+//		}
+// Metodo do professor e melhor sem duvidas
+		
+		return (a  > b ) ? a : b;
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o primeiro numero: ");
+		int num1 = sc.nextInt();
+		
+		System.out.println("Digite o segundo numero: ");
+		int num2 = sc.nextInt();
+		
+		
+		
+		System.out.println(maior(num1,num2) + " é o maior numero !");
+		
+		
+
+	}
+
+}

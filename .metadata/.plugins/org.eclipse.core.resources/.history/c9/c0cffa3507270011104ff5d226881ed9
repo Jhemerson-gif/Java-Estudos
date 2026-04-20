@@ -1,0 +1,35 @@
+package Alg;
+
+import java.util.Scanner;
+
+public class Aula6 {
+
+	public static void main(String[] args) {
+
+
+		Scanner entrada = new Scanner(System.in);
+		
+		int soma = 0;
+		
+		while(true) {
+			
+			System.out.print("Digite o numero: ");
+			
+			int numero = entrada.nextInt();
+			
+			
+			soma += numero;
+			
+				
+			
+			if (numero == 0) {
+				break;
+			}
+			
+			
+		}
+		System.out.println("O total dos numeros digitados é de: "+ soma);
+
+	}
+
+}

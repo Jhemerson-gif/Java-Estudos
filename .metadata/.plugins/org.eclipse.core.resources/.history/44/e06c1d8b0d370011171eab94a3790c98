@@ -1,0 +1,74 @@
+package Set;
+
+import java.util.Scanner;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class Set_Exercicio_1 {
+
+	public static void main(String[] args) {
+		
+		Set<String> amongus = new HashSet<>();
+		Set<String> amongusordenado = new TreeSet<>();
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+		
+			System.out.print("\nDigite a palavra que deseja adicionar (ou sair): ");
+			
+			String palavra = sc.nextLine().toLowerCase();
+			
+			if(palavra.equals("sair")) {
+				
+				System.out.println("\n=-=-=-=- RESULTADO -=-=-=-=-=");
+				
+				break;
+			}
+			
+			if (amongus.add(palavra)) {
+				
+				System.out.println("Palavra adicionada com sucesso!");
+				
+			}else {
+				
+				System.out.println("Palavra já existe dentro da lista.");
+			}
+			
+		}
+		
+		System.out.println("Todas as palavras digitadas: " + amongus);
+		System.out.println("Foram digitadas: "+ amongus.size() + " palavras.");
+		amongus.equals(amongusordenado);
+		System.out.println("Todas as palavras em ordem alfábetica " + amongusordenado);
+		
+		while(true) {
+			
+			System.out.print("\nDeseja pesquisar para saber se a palavra existe no cojunto?(não para sair): ");
+			String cond = sc.nextLine().toLowerCase();
+			
+			if(cond.equals("não")) {
+				
+				break;
+				
+			}
+			
+			if(amongus.contains(cond)) {
+				
+				System.out.println("A palavra digitada existe dentro do cojunto!");
+			}else {
+				
+				System.out.println("A palavra não existe no cojunto. Digite novamente!");
+			}
+			
+		}
+		
+		System.out.println("Fim do programa!");
+		sc.close();
+		
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+package while_exercicio_9;
+
+import java.util.Scanner;
+
+public class While_Exercicio_9 {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Calcular o fatorial de um numero utilizando laço While");
+		
+		int numero;
+		int numeromenor;
+		
+		System.out.print("Digite numero: ");
+		
+		numero = entrada.nextInt();
+		
+		
+		
+		while (true) {
+			numeromenor = numero;
+			
+			numeromenor--;
+			
+			
+			System.out.print(numero);
+			numero--;
+			
+			if (numero != 0) {
+				
+			System.out.print(" x ");
+				
+			}
+			int multi = numero * numeromenor;
+			
+			if (numero == 0 ) {
+			System.out.print(" = " + multi);
+			
+			
+			break;
+			
+			
+			}
+		}
+
+	}
+
+}

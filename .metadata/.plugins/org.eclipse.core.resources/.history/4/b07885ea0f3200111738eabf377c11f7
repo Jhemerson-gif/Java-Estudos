@@ -1,0 +1,94 @@
+import java.util.Scanner;
+ 
+public class Notas{
+    
+        //Função calcular média
+        public static double calcularMedia(double[] notas){ //Recebve array de notas como parametro
+            double soma = 0;
+            for (int i = 0; i < notas.length; i++){ //percorre todas as posições do meu vetor/array
+                soma += notas[i]; //soma cada uma das notas
+            }
+            return soma / notas.length; // divide soma pela quantidade de notas
+        }
+        
+        //Função aluno com a maior nota
+        public static int maiorNota(double[] notas){
+            int maior = 0; //assume que o primeiro aluno é o que tem a maior notas
+            
+            for (int i = 1; i < notas.length; i++ ){
+                if (notas[i] > notas[maior]){ //comparação das notas
+                    maior = i; //atualização do maior indice
+                }
+            }
+            
+            return maior; //retornar qual foi o aluno com a maior nota
+            
+        }
+        
+        //Função - aluno com a menor nota
+        public static int menorNota(double[] notas){
+            int menor = 0; //assume que o primeiro elemento vai ser a menor notas
+            
+            for (int i = 1; i < notas.length; i++){
+                if (notas[i] < notas[menor]){ //comparação dos valores procorando a menor nota
+                    menor = i; //atualiza o menor indice
+                }
+            
+            }
+            
+             return menor; //retorna o aluno com a menor nota
+        }
+        
+        //função para saber a situação do aluno
+        public static String siuacaoAluno(double nota){
+            if (nota >= 7 ){
+                return "Aluno Aprovado"; 
+            }else{
+                return "Aluno Reprovado";
+            }
+            
+        }
+        
+        public static void main(String[] args){
+            
+            Scanner sc = new Scanner(System.in);
+            
+            String[] nomes = new String[3]; //vetor para armazenar os nomes dos alunos
+            double[] notas = new double[3]; //vetor para armazenar as notas
+            
+            //Receber os nomes e as notas dos nossos alunos
+            for (int i = 0; i < 3; i++){
+                System.out.println("Digite o nome do aluno: "+ (i + 1)+ ":");
+                nomes[i] = sc.nextLine();
+                
+                System.out.println("Digite a nota do aluno: "+ (i + 1)+ ":");
+                notas[i] = sc.nextDouble();
+                sc.nextLine(); //Limpar o buffer do teclado
+            }
+            
+            //Chamar as funções
+            double media = calcularMedia(notas); //chama e executa a minha função de calcular a media das notas
+            int maior = maiorNota(notas); //chama e executa a minha função de maior notas
+            int menor = menorNota(notas); //cahama e executa a minha função de menor nota 
+            
+            
+            //Resultados
+            
+            System.out.println("\n---------Resultado dos nossos alunos---------");
+            
+            System.out.println("A media da turma foi: " +media);
+            
+            System.out.println("A maior nota foi: " +nomes[maior]);
+            System.out.println(" A menor nota foi: " +nomes[menor]); 
+            
+            System.out.println("\n Alunos Aprovados ou Reprovados:");
+            
+            for (int i = 0; i < 3; i++){
+                System.out.println(nomes[i] + "Nota: "+ notas[i] + " - " +siuacaoAluno(notas[i])); 
+            }
+            
+            sc.close(); //fechar o Scanner
+            
+        }
+        
+}

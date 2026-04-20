@@ -1,0 +1,79 @@
+package Set;
+
+import java.util.HashSet;
+
+import java.util.Set;
+
+public class Set_Exemplo_1 {
+
+	public static void main(String[] args) {
+		
+		Set<String> frutas = new HashSet<>();
+		
+		frutas.add("Maça");
+		frutas.add("Banana");
+		frutas.add("Laranja");
+		frutas.add("Abacaxi");
+		frutas.add("Manga");
+		frutas.add("Maça");
+		
+		System.out.println(frutas); 
+		
+		if(frutas.contains("Banana")) {
+			
+			System.out.print("Banana está presente");
+		}
+		
+		frutas.remove("Laranja");
+		System.out.println("Após remover Laranja: "+ frutas);
+		
+		if (frutas.contains("Manga")) {
+			frutas.remove("Manga");
+			frutas.add("Melancia");
+		}
+		
+		System.out.println("Após editar Manga para Melancia: "+ frutas);
+		
+		Set<String> filtradas = new HashSet<>();
+		
+		for(String fruta : frutas) {
+			
+			if (fruta.startsWith("M")) {
+				
+				filtradas.add(fruta);
+			}
+		
+		}
+		System.out.println("Frutas filtradas (começam com M): "+ filtradas);
+		
+		Set<String> frutas2 = new HashSet<>(); // adiciona uma lista dentro da outra
+		
+		frutas2.add("Pera");
+		frutas2.add("Uva");
+		frutas2.add("Abacaxxi");
+		
+		frutas.addAll(frutas2);
+		
+		System.out.println("Após juntar os cojuntos: "+ frutas);
+		
+		
+		Set<String> intersecao = new HashSet<>();
+		
+		intersecao.retainAll(frutas2);
+		
+		System.out.println("Interseção: " + intersecao);
+		
+		
+		Set<String> diferenca = new HashSet<>(frutas);
+		
+		diferenca.removeAll(frutas2);
+		
+		System.out.println("Diferença: "+ diferenca);
+		
+		
+		frutas.clear();
+		
+		System.out.println("Após limpar: "+ frutas);
+	}
+
+}

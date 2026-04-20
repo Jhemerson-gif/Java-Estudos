@@ -1,0 +1,30 @@
+package Funcoes_Metodos_10;
+
+import java.util.Scanner;
+
+public class Exercicio_3 {
+	
+	public static double media(double a, double b) {
+		
+		return a % b;
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite o primeiro numero: ");
+		double num1 = sc.nextInt();
+		
+		System.out.print("Digite o segundo numero: ");
+		double num2 = sc.nextInt();
+		
+		double Amedia = media(num1, num2);
+		
+		System.out.println("A média dos numeros "+ num1 + " e " + num2 + " = " + Amedia);
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,29 @@
+package Funcoes_Metodos_10;
+
+import java.util.Scanner;
+
+public class Exercicio_2 {
+	
+	public static void fatorial(int a) {
+		
+		for(int i = 0; i < a; i++) {
+			
+			int multi =  a * i; 
+			
+		}
+		
+		return multi;
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite um numero para descobri a fatorial: ");
+		fatorial(sc.nextInt());
+
+	}
+
+}

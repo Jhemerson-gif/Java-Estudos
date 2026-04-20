@@ -1,0 +1,31 @@
+package Funcoes_Metodos_10;
+
+public class Exercicio_8 {
+	
+	public static String contaVorgais(String texto) {
+		String palavra = "";
+		String vorgais = "a"+ "e" +"i" + "o" + "u";
+		int quant = 0;
+		
+		for(int i = 0;  i < texto.length(); i++) {
+			
+			palavra  += texto.charAt(i);
+			
+			if(palavra.contains(vorgais));
+			
+			quant++;
+			
+
+		}
+
+		return "Quantidade de vorgais em " + texto + "é de : "+ quant;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println(contaVorgais("AMONGUS"));
+
+	}
+
+}

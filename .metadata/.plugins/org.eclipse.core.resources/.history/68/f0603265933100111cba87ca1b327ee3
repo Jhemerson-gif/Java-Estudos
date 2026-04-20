@@ -1,0 +1,117 @@
+package Listas;
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class Lista_Exemplo_9_Sistema_de_Lista_com_Menu_Interativo {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<String> lista = new ArrayList <>();
+		
+		int opcao;
+		
+		do {
+			
+			System.out.println("\n==== MENU DA LISTA ====");
+			System.out.println("1. Adicionar item");
+			System.out.println("2. Remover item");
+			System.out.println("3. Alterar item");
+			System.out.println("4. Listar items");
+			System.out.println("5. Limpar lista");
+			System.out.println("6. Sair");
+			System.out.println("Escolha uma opção: ");
+			
+			opcao = sc.nextInt();
+			sc.nextLine();
+			
+			switch(opcao) {
+			
+			case 1:
+				System.out.println("Digite o item a adicionar: ");
+				
+				String novoItem = sc.nextLine();
+				
+				lista.add(novoItem);
+				
+				System.out.println("Item adicionado com sucesso!");
+				
+				break;
+				
+			case 2:
+				if(lista.isEmpty()) { // caso não encontre o valor na lista e ela esteja vazia
+					System.out.println("A Lista está vazia!");
+				}else {
+				
+				System.out.println("Digite o item que deseja remover: ");
+				
+				String itemRemover = sc.nextLine(); // caso encontre o valor na lista
+				
+				if (lista.remove(itemRemover)) {
+				
+					System.out.println("Item removido com sucesso!");
+					
+				}else { // caso não encontre o valor na lista
+					
+					System.out.println("Item não encontrado.");
+				}
+				break;
+				
+				}
+			
+			case 3:
+				
+				if(lista.isEmpty()) {	// Caso a lista esteja vazia
+					
+					System.out.println("A lista está vazia!");
+					
+				}else {
+					
+					System.out.println("Items da lista: ");
+					
+					for(int i =0; i < lista.size(); i++) { // loop para pegar cada valor da lista
+						
+						System.out.println((i+1) + ". " + lista.get(i));
+					}
+					
+				System.out.println("Digite o item na lista que deseja alterar: ");
+				int itemAlterar = sc.nextInt();
+							
+				}
+				
+				break;
+				
+			case 4:
+				System.out.println("Está é a lista dos items já digitados: "+ lista);
+				
+				break;
+				
+			case 5:
+				lista.clear();
+				System.out.println("Items a lista foram removidos com sucesso!");
+				
+				break;
+				
+			case 6:
+				System.out.println("Saindo do programa. Até mais!");
+				
+				break;
+			
+			default:
+				System.out.println("Opção invalida. Tente novamente!");
+			
+			
+			}
+			
+			
+		}while (opcao != 6);
+		
+		sc.close();
+		
+
+	}
+
+}

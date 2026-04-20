@@ -1,0 +1,62 @@
+package Funcoes_Exemplos;
+
+public class Funcoes_2 {
+	
+	public static void linhaSeparadora() {
+		
+		System.out.println("=================================");
+	}
+	
+	public static void repertirMensagem (String mensagem, int vezes) {
+		
+		for(int i = 0; i < vezes; i++) {
+			
+			System.out.println(mensagem);
+		}
+	}
+	
+	public static int valorAbsoluto(int numero) {
+		
+		if(numero < 0) {
+			return -numero;
+		}
+		
+		return numero;
+	}
+	
+	public static boolean ehMultiplo( int x, int y) {
+		
+		return x % y == 0;
+		
+	}
+	
+	public static  char primeiraLetra(String nome) {
+		
+		return nome.charAt(0);
+	}
+
+	public static void main(String[] args) {
+		
+		linhaSeparadora();
+		
+		repertirMensagem("Estudando amongus com funções", 3);
+		
+		linhaSeparadora();
+		
+		int numero = -15;
+		
+		System.out.println("O valor absoluto de " + numero + " é: " + valorAbsoluto(numero));
+		
+		linhaSeparadora();
+		
+		int x = 20, y = 5;
+		
+		System.out.println(x + " é  multiplo de " + y +" ? " + ehMultiplo(x,y));
+		
+		linhaSeparadora();
+		
+		System.out.println("A primeira letra do nome " + nome + " é :" primeiraLetra(nome));
+
+	}
+
+}

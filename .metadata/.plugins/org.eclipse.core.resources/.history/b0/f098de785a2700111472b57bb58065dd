@@ -1,0 +1,32 @@
+package Revisao;
+
+import java.util.Random;
+
+public class Revisao_Exercicio_8 {
+
+	public static void main(String[] args) {
+		System.out.print("SORTEIO ATÉ ENCONTRAR O NUMERO 10 DE 0 A 20 ");
+		
+		System.out.print("Numero: ");
+		
+		Random aleatorio = new Random();
+		
+		int numero;
+		
+		while (true) {
+			
+			numero = aleatorio.nextInt(20);
+			
+			if (numero == 10) {
+				
+				System.out.println("Você encontrou o numero  10!");
+				break;
+			}
+			
+			System.out.println("Você sorteiou: " + numero);
+			System.out.println("Encerrando ...");
+		}
+
+	}
+
+}

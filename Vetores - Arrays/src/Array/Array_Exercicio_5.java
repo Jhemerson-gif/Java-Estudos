@@ -1,0 +1,40 @@
+package Array;
+
+import java.util.Scanner;
+
+public class Array_Exercicio_5 {
+
+	public static void main(String[] args) {
+		System.out.println("Multiplicar vetor por um número: ");
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int[] numeros = {10,8,6,4,1};
+		int[] num = new int[5];
+		
+		
+		System.out.println("Digite número: ");
+			
+		int mult = entrada.nextInt();
+		
+		
+		for (int i = 0; i < numeros.length; i++) {
+			
+			numeros[i] *= mult;
+			
+			
+
+			
+		}
+		
+		System.out.print("Resultado da multiplicação: ");
+		
+		for(int valor: numeros) {
+			
+			System.out.print(valor + " ");
+			
+		}
+
+	}
+
+}

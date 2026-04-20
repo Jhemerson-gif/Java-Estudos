@@ -1,0 +1,25 @@
+package Funcoes_Metodos_10;
+
+public class Exercicio_9 {
+
+	public static int contaAte(int num) {
+		
+		for(int i = 1; i < num; i++) {
+			if(i < num) {
+				System.out.print(num + ", ");
+			}
+			
+			if(i == num) {
+				
+				System.out.println(num + ". Fim do programa");
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(contaAte(100));
+
+	}
+
+}

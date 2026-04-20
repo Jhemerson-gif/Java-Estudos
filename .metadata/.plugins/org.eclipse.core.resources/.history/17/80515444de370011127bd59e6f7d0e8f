@@ -1,0 +1,51 @@
+package Funcoes_Metodos_10;
+
+public class Funcoes_1 {
+	
+	public static void  mensagemBoasVindas() {
+		
+		System.out.println("Bem-vindo ao mundo das funções em java.");
+	}
+	
+	public static void saudar(String nome) {
+		
+		System.out.println("Olá, "+ nome +"! É um prazer te ver aqui.");
+	}
+	
+	public static int somar(int a ,int b) {
+		
+		return a+b;
+	}
+	
+	public static boolean ehPar(int numero) {
+		
+		return numero % 2 == 0;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		mensagemBoasVindas();
+		
+		System.out.println("\n -------------------------------------");
+		
+		saudar("Jhemerson");
+		
+		System.out.println("\n -------------------------------------");
+		
+		int resultadoSoma = somar(10,5);
+		
+		System.out.println("A soma de 10 + 5 é: "+ resultadoSoma);
+		System.out.println("\n -------------------------------------");
+		
+		int numeroTeste = 7;
+		
+		boolean resultadoPar = ehPar(numeroTeste);
+		
+		System.out.println("O numero "+ numeroTeste + " é par? " + resultadoPar);
+
+	}
+
+}

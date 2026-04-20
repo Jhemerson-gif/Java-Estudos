@@ -1,0 +1,32 @@
+package Funcoes_Metodos_10;
+
+import java.util.Scanner;
+
+public class Exercicio_4 {
+	
+	public static boolean checkIdade(int idade) {
+		
+		if ( idade  < 18) {
+			
+			return false;
+		}else {
+			
+			return true;
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		 
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite a sua idade: ");
+		
+		boolean idade = checkIdade(sc.nextInt());
+		
+		System.out.println("Você é maior de idade: "+ idade);
+
+	}
+
+}

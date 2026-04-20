@@ -1,0 +1,19 @@
+package Funcoes_Metodos_10;
+
+
+public class Exercicio_1 {
+
+	public static void mensagem(String mensagem) {
+		
+		System.out.println("Olá, Mundo!");
+	}
+	
+	public static void main(String[] args) {
+		
+		mensagem("");
+
+	}
+	
+	
+
+}

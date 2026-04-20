@@ -1,0 +1,89 @@
+package Set;
+
+import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Set_Exemplo_2_Menu_Interativo {
+
+	public static void main(String[] args) {
+		
+		Set<String> cojunto = new HashSet<>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int opcao;
+		
+		do {
+			
+			System.out.println("\n===== MENU SET ======");
+			
+			System.out.println("1. Adicionar elemento");
+			System.out.println("2. Remover elemento");
+			System.out.println("3. Editar elemento");
+			System.out.println("4. Listar todos os elemento");
+			System.out.println("5. Limpar cojuntos");
+			System.out.println("6. Sair");
+			
+			System.out.println("Escolha uma opção: ");
+			
+			opcao = sc.nextInt();
+			
+			sc.nextLine();
+			
+			switch (opcao) {
+			
+				case 1:
+					
+					System.out.println("Digite o elemento para adicionar: ");
+					
+					String novo = sc.nextLine();
+					
+					if (cojunto.add(novo)) {
+						
+						System.out.println("Elemento adicionado com sucesso!");
+					}else {
+						
+						System.out.println("Elemento já existe no cojunto!");
+					}
+				case 2:
+					
+					System.out.println("Digite o numero do elemento que deseja remover: ");
+					int remove = sc.nextInt();
+					
+					if (cojunto.remove(remove)) {
+						
+						System.out.println("Elemento removido com sucesso!");
+					}else {
+						
+						System.out.println("Não existe o elemento dentro do cojunto!");
+					}
+				
+				case 3:
+					
+					System.out.println("Digite o elemento do cojunto deseja editar: ");
+					
+					
+				case 4:
+					
+					System.out.println("Este são todos os elementos do conjunto");
+					
+					System.out.println(cojunto);
+					
+				case 5: 
+					
+					cojunto.clear();
+					
+					System.out.println("Todos os  elementos do cojuntos foram removidos;");
+					
+				case 0:
+					
+					System.out.println("Encerrando programa...");
+			}
+			
+		} while(opcao != 0);
+		sc.close();
+
+	}
+
+}

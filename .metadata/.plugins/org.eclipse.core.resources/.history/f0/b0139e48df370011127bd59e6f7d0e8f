@@ -1,0 +1,26 @@
+package Funcoes_Exemplos;
+
+public class Funcoes_2 {
+	
+	public static void linhaSeparadora() {
+		
+		System.out.println("=================================");
+	}
+	
+	public static void repertirMensagem (String mensagem, int vezes) {
+		
+		for(int i = 0; i < vezes; i++) {
+			
+			System.out.println(mensagem);
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		linhaSeparadora();
+		
+		repertirMensagem("Estudando amongus com funções", 3);
+
+	}
+
+}

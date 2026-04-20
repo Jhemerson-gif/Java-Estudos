@@ -1,0 +1,22 @@
+package Exercicios;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Lista_Exercicio_4 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> numeros = new ArrayList<>();
+		
+		numeros.add(10);
+		numeros.add(25);
+		numeros.add(7);
+		numeros.add(40);
+		numeros.add(13);
+		
+		System.out.println("O maior numero: " + Collections.max(numeros));
+
+	}
+
+}

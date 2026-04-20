@@ -1,0 +1,28 @@
+package Listas;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Lista_Exercicio_5 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<String> nomes = new ArrayList<>();
+		
+		ArrayList<String> nomesunicos = new ArrayList<>();
+		
+		for(int i = 0; i < 5; i ++) {
+			
+			System.out.print((i+1) + ". Digite o nome: ");
+			
+			nomes.add(sc.nextLine());
+			
+		}
+		
+		System.out.println(nomes);
+
+	}
+
+}

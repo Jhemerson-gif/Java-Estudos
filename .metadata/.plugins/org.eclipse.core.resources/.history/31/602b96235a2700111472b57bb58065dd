@@ -1,0 +1,46 @@
+package Revisao;
+
+import java.util.Random;
+
+public class Revisao_Exercicio_8 {
+
+	public static void main(String[] args) {
+		System.out.print("Numeros: ");
+		
+		for (int i= 0; i <= 20; i++) {
+			
+			System.out.print(i);
+			System.out.print(" ");
+			
+			if (i == 10) {
+				
+				break;
+				
+			}
+		}
+		System.out.println();
+		System.out.println("Você chegou ao numero 10!");
+		
+		
+		System.out.print("Numero: ");
+		
+		Random aleatorio = new Random();
+		
+		int numero;
+		
+		while (true) {
+			
+			numero = aleatorio.nextInt(20);
+			
+			if (numero == 10) {
+				
+				System.out.println("Você encontrou o numero  10!");
+				break;
+			}
+			
+			System.out.print("Você sorteiou: " + numero);
+		}
+
+	}
+
+}

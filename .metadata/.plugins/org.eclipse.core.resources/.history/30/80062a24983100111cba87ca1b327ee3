@@ -1,0 +1,29 @@
+package Listas;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Lista_Exercicio_1 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Exercicio 1: Cadastrando Nomes");
+		
+		ArrayList<String> nomes = new ArrayList<>(Arrays.asList());
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String novosnomes;
+		
+		while( novosnomes != "sair") {
+		
+		System.out.println("Digite o nome: ");
+		
+		novosnomes = sc.nextLine();
+		
+		nomes.add(novosnomes);
+		
+
+	}
+
+}

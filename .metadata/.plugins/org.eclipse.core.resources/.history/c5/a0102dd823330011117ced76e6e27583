@@ -1,0 +1,48 @@
+package Listas;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Lista_Exercicio_5 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Exercício 5: Remover nomes duplicados: ");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<String> nomes = new ArrayList<>();
+		
+		ArrayList<String> nomesunicos = new ArrayList<>();
+		
+		
+		
+		
+		for(int i = 0; i < 5; i ++) {
+			
+			System.out.print((i+1) + ". Digite o nome: ");
+			
+			nomes.add(sc.nextLine());
+			
+		}
+		
+		for(String name : nomes ) {
+		
+		if(name.equalsIgnoreCase(name)) {
+			
+			continue;
+		}else{
+			nomes.remove(name);
+		}
+		}
+		
+		System.out.println("\nLista de nomes  sem duplicação");
+		
+		for (int b = 0; b< 5; b++) {
+			
+
+		System.out.println((b + 1) + ". " + nomes);
+		}
+	}
+
+}

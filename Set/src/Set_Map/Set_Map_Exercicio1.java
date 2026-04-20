@@ -1,0 +1,47 @@
+package Set_Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Set_Map_Exercicio1 {
+
+	public static void main(String[] args) {
+		
+		Map<String, String> dicionario = new HashMap<>();
+		
+		dicionario.put("Cachorro", "Dog");
+		dicionario.put("Arroz", "Rice");
+		dicionario.put("Feijão","Beans");
+		dicionario.put("Carro", "Car");
+		dicionario.put("Ola", "Hello");
+		
+		
+		System.out.println("Escolha a palavra que deseja traduzir: " + dicionario.keySet());
+
+		
+		for(Map.Entry<String, String> entrada : dicionario.entrySet()) {
+			System.out.println(entrada.getKey() + " -> " + entrada.getValue());
+
+		}
+		String palavra = "Carro";
+		
+			if(dicionario.containsKey(palavra)) {
+			
+			System.out.println("A tradução de "+ palavra + " para inglês é " + dicionario.get(palavra));
+			
+		}else {
+			
+			System.out.println("\nA  palavra '"+ palavra + "' não está no dicionario.");
+		}
+			
+		dicionario.remove("Feijão");
+		
+		System.out.println("\nDicionario após remover 'Feijão'");
+		
+		for(Map.Entry<String, String> entrada : dicionario.entrySet()) {
+			System.out.println(entrada.getKey() + " -> "+ entrada.getValue());
+			
+		}
+	}
+
+}

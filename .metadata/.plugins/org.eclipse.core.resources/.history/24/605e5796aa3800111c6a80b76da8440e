@@ -1,0 +1,25 @@
+package Funcoes_Metodos_10;
+
+import java.util.Scanner;
+
+public class Exercicio_6 {
+	
+	public static int tamanhoString(String palavra) {
+		
+		return palavra.length();
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite uma palavra: ");
+		String tamanho = sc.nextLine();
+		
+		System.out.println("tamanho da sua palavra é de " + tamanhoString(tamanho) + " numeros.");
+		
+		
+
+	}
+
+}
